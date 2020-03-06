@@ -8,7 +8,46 @@ exec echo "Try running with --app dog/cat"
 exec echo vep --fasta "$1" --offline "$2"
 
 %apphelp dog
-Args: input.vcf[.gz] outout.txt reference.fasta
-
-%apprun cat
-exec echo , this is cat
+Args: input.vcf[.gz] outout.txt reference.fasta \
+  vep --dir CACHE_DIR \
+        --offline \
+        --fork 8 \
+        --buffer_size 1000000 \
+        --format vcf \
+        --verbose \
+        --species homo_sapiens \
+        --assembly GRCh38 \
+        --cache \
+        --input_file INPUT_FILE \
+        --vcf \
+        --force_overwrite \
+        --output_file OUTPUT_FILE \
+        --sift b \
+        --polyphen b \
+        --ccds \
+        --uniprot \
+        --hgvs \
+        --symbol \
+        --numbers \
+        --domains \
+        --regulatory \
+        --canonical \
+        --protein \
+        --biotype \
+        --uniprot \
+        --tsl \
+        --appris \
+        --gene_phenotype \
+        --af \
+        --af_1kg \
+        --af_esp \
+        --af_gnomad \
+        --max_af \
+        --pubmed \
+        --variant_class \
+        --total_length \
+        --merged \
+        --check_existing \
+        --fasta REFERENCE_FILE \
+        --nearest symbol \
+        --total_length
