@@ -4,7 +4,7 @@ From: ubuntu:latest
 %environment
     SINGULARITYENV_PREPEND_PATH=/opt/vep/src/ensembl-vep/
     CACHE=/opt/vep/.vep
-    export REF SINGULARITYENV_PREPEND_PATH
+    export CACHE SINGULARITYENV_PREPEND_PATH
 
 %runscript
 exec echo "Try running with --app dog/cat"
