@@ -7,5 +7,8 @@ exec echo "Try running with --app dog/cat"
 %apprun dog
 exec echo vep --fasta "$1" --offline "$2"
 
+%apphelp dog
+Args: input.vcf[.gz] outout.txt reference.fasta
+
 %apprun cat
 exec echo , this is cat
