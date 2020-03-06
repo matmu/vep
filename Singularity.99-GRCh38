@@ -5,4 +5,7 @@ From: ubuntu:latest
 exec echo "Try running with --app dog/cat"
 
 %apprun dog
-exec echo Hello "$@", this is Dog
+exec echo vep --fasta "$1" --offline "$2"
+
+%apprun cat
+exec echo , this is cat
