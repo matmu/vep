@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: ubuntu:latest
+
+%labels
+MAINTAINER Matthias Munz
+
+%runscript
+exec echo "Try running with --app dog/cat"
+
+%apprun dog
+exec echo Hello "$@", this is Dog
+
+%apprun cat
+exec echo Meow "$@", this is Cat
