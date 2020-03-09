@@ -4,5 +4,5 @@ FROM ensemblorg/ensembl-vep:latest
 # /usr/src/app in your image filesystem (never the host’s filesystem).
 WORKDIR /opt/vep/
 
-# Download cache data and install
+# Download and install cache
 RUN mkdir .vep; cd .vep; curl -O ftp://ftp.ensembl.org/pub/release-99/variation/vep/homo_sapiens_vep_99_GRCh38.tar.gz && tar xzf homo_sapiens_vep_99_GRCh38.tar.gz && rm homo_sapiens_vep_99_GRCh38.tar.gz
