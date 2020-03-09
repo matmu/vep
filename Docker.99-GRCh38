@@ -1,0 +1,8 @@
+FROM ensemblorg/ensembl-vep:latest
+
+# Use WORKDIR to specify that all subsequent actions should be taken from the directory 
+# /usr/src/app in your image filesystem (never the host’s filesystem).
+WORKDIR /opt/vep/
+
+# Download cache data and install
+RUN mkdir .vep; cd .vep; curl -O ftp://ftp.ensembl.org/pub/release-99/variation/vep/homo_sapiens_vep_99_GRCh38.tar.gz && tar xzf homo_sapiens_vep_99_GRCh38.tar.gz && rm homo_sapiens_vep_99_GRCh38.tar.gz
