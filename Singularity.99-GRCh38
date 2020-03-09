@@ -8,8 +8,113 @@ VEP 99-GRCh38. Available VEP cache: merged (use --merged). See environment varia
     SINGULARITYENV_PREPEND_PATH=/opt/vep/src/ensembl-vep/
     CACHE=/opt/vep/.vep
     export CACHE SINGULARITYENV_PREPEND_PATH
+
+%apprun vep
+    exec vep --dir $CACHE \
+        --species homo_sapiens \
+        --assembly GRCh38 \
+        --merged \
+        --cache \
+        --offline \
+        --verbose "$@"
     
-%apprun default
+%apphelp vep
+    Args: [vep-parameters]
+    Command executed (For parameter explanations see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html) :
+    vep --dir $CACHE
+        --species homo_sapiens
+        --assembly GRCh38
+        --merged
+        --cache
+        --offline
+        --verbose [vep-parameters]
+
+%apprun vep-vcf
+    exec vep --dir $CACHE \
+        --input_file $1 \
+        --output_file $2 \
+        --fasta $3 \
+        --species homo_sapiens \
+        --assembly GRCh38 \
+        --vcf \
+        --merged \
+        --cache \
+        --offline \
+        --verbose \
+        --force_overwrite \
+        --sift b \
+        --polyphen b \
+        --ccds \
+        --uniprot \
+        --hgvs \
+        --symbol \
+        --numbers \
+        --domains \
+        --regulatory \
+        --canonical \
+        --protein \
+        --biotype \
+        --uniprot \
+        --tsl \
+        --appris \
+        --gene_phenotype \
+        --af \
+        --af_1kg \
+        --af_esp \
+        --af_gnomad \
+        --max_af \
+        --pubmed \
+        --variant_class \
+        --total_length \
+        --check_existing \
+        --nearest symbol \
+        --total_length
+    
+%apphelp vep-vcf
+    Args: input.vcf[.gz] outout.vcf reference.fasta
+    Output format: vcf
+    Command executed (For parameter explanations see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html) :
+    Runs /opt/vep/src/ensembl-vep/vep --dir $CACHE
+        --input_file INPUT_FILE
+        --output_file OUTPUT_FILE
+        --fasta REFERENCE_FILE
+        --species homo_sapiens
+        --assembly GRCh38
+        --vcf
+        --merged
+        --cache
+        --offline
+        --verbose
+        --force_overwrite
+        --sift b
+        --polyphen b
+        --ccds
+        --uniprot
+        --hgvs
+        --symbol
+        --numbers
+        --domains
+        --regulatory
+        --canonical
+        --protein
+        --biotype
+        --uniprot
+        --tsl
+        --appris
+        --gene_phenotype
+        --af
+        --af_1kg
+        --af_esp
+        --af_gnomad
+        --max_af
+        --pubmed
+        --variant_class 
+        --total_length
+        --check_existing
+        --nearest symbol
+        --total_length
+
+%apprun vep-tab
     exec vep --dir $CACHE \
         --input_file $1 \
         --output_file $2 \
@@ -50,11 +155,11 @@ VEP 99-GRCh38. Available VEP cache: merged (use --merged). See environment varia
         --nearest symbol \
         --total_length
     
-%apphelp default
+%apphelp vep-tab
     Args: input.vcf[.gz] outout.txt reference.fasta
     Output format: tab-delimited
     Command executed (For parameter explanations see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html) :
-    vep --dir $CACHE
+    Runs /opt/vep/src/ensembl-vep/vep --dir $CACHE
         --input_file INPUT_FILE
         --output_file OUTPUT_FILE
         --fasta REFERENCE_FILE
@@ -93,3 +198,9 @@ VEP 99-GRCh38. Available VEP cache: merged (use --merged). See environment varia
         --check_existing
         --nearest symbol
         --total_length
+
+%apprun filter-vep
+    exec filter_vep
+    
+%apphelp filter-vep
+    Runs /opt/vep/src/ensembl-vep/filter_vep
