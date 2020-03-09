@@ -2,7 +2,14 @@ Bootstrap: docker
 From: matmu/vep:99-GRCh38
 
 %help
-VEP 99-GRCh38. Available VEP cache: merged (use --merged). See environment variables (env) for file locations.
+VEP 99-GRCh38. Available VEP cache: merged (VEP command --merged). 
+Available apps: 
+                    vep
+                    vep-tab (output format tab)
+                    vep-vcf (output format tab)
+                    filter-vep
+
+View app specific help section for more details (e.g. singularity run-help --app vep-tab vep.99-GRCh38.simg).
 
 %environment
     SINGULARITYENV_PREPEND_PATH=/opt/vep/src/ensembl-vep/
