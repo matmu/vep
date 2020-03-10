@@ -1,6 +1,9 @@
 Bootstrap: docker
 From: matmu/vep:99-GRCh38
 
+%labels
+Maintainer Matthias Munz <m.munz@uni-luebeck.de>
+
 %help
 VEP 99-GRCh38. Available VEP cache: merged (VEP command --merged). 
 Available apps: 
