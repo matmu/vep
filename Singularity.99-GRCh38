@@ -12,9 +12,8 @@ Available apps:
 View app specific help section for more details (e.g. singularity run-help --app vep_tab vep.99-GRCh38.simg).
 
 %environment
-    SINGULARITYENV_PREPEND_PATH=/opt/vep/src/ensembl-vep/
-    CACHE=/opt/vep/.vep
-    export CACHE SINGULARITYENV_PREPEND_PATH
+    export PATH=/opt/vep/src/ensembl-vep/:${PATH}
+    export CACHE=/opt/vep/.vep
 
 %apprun vep
     exec vep --dir $CACHE \
