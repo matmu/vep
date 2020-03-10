@@ -1,4 +1,4 @@
-FROM ensemblorg/ensembl-vep:latest
+FROM ensemblorg/ensembl-vep:release_99.2
 
 MAINTAINER Matthias Munz <m.munz@uni-luebeck.de>
 
