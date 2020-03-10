@@ -4,10 +4,10 @@ From: matmu/vep:99-GRCh38
 %help
 VEP 99-GRCh38. Available VEP cache: merged (VEP command --merged). 
 Available apps: 
-                    vep
-                    vep_tab (output format tab)
-                    vep_vcf (output format tab)
-                    filter_vep
+  vep
+  vep_tab (output format tab)
+  vep_vcf (output format tab)
+  filter_vep
 
 View app specific help section for more details (e.g. singularity run-help --app vep_tab vep.99-GRCh38.simg).
 
