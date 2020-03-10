@@ -36,7 +36,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --offline
         --verbose [vep-parameters]
 
-%apprun vep-vcf
+%apprun vep_vcf
     exec vep --dir $CACHE \
         --input_file $1 \
         --output_file $2 \
@@ -77,7 +77,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --nearest symbol \
         --total_length
     
-%apphelp vep-vcf
+%apphelp vep_vcf
     Args: input.vcf[.gz] outout.vcf reference.fasta
     Output format: vcf
     Command executed (For parameter explanations see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html) :
@@ -121,7 +121,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --nearest symbol
         --total_length
 
-%apprun vep-tab
+%apprun vep_tab
     exec vep --dir $CACHE \
         --input_file $1 \
         --output_file $2 \
@@ -162,7 +162,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --nearest symbol \
         --total_length
     
-%apphelp vep-tab
+%apphelp vep_tab
     Args: input.vcf[.gz] outout.txt reference.fasta
     Output format: tab-delimited
     Command executed (For parameter explanations see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html) :
@@ -206,8 +206,8 @@ View app specific help section for more details (e.g. singularity run-help --app
         --nearest symbol
         --total_length
 
-%apprun filter-vep
+%apprun filter_vep
     exec filter_vep
     
-%apphelp filter-vep
+%apphelp filter_vep
     Runs /opt/vep/src/ensembl-vep/filter_vep
