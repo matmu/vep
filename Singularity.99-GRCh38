@@ -5,11 +5,11 @@ From: matmu/vep:99-GRCh38
 VEP 99-GRCh38. Available VEP cache: merged (VEP command --merged). 
 Available apps: 
                     vep
-                    vep-tab (output format tab)
-                    vep-vcf (output format tab)
-                    filter-vep
+                    vep_tab (output format tab)
+                    vep_vcf (output format tab)
+                    filter_vep
 
-View app specific help section for more details (e.g. singularity run-help --app vep-tab vep.99-GRCh38.simg).
+View app specific help section for more details (e.g. singularity run-help --app vep_tab vep.99-GRCh38.simg).
 
 %environment
     SINGULARITYENV_PREPEND_PATH=/opt/vep/src/ensembl-vep/
