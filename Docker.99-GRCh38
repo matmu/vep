@@ -3,5 +3,3 @@ FROM ensemblorg/ensembl-vep:release_99.2
 MAINTAINER Matthias Munz <m.munz@uni-luebeck.de>
 
 RUN perl INSTALL.pl --AUTO fcp --NO_UPDATE --ASSEMBLY GRCh38 --PLUGINSDIR /opt/vep/.vep/Plugins/ --CACHEDIR /opt/vep/.vep/ --PLUGINS all --SPECIES homo_sapiens_merged
-# RUN mkdir /opt/vep/.vep && curl -L ftp://ftp.ensembl.org/pub/release-99/variation/vep/homo_sapiens_vep_99_GRCh38.tar.gz | tar -xvf - -C /opt/.vep
-# RUN curl -L ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz -O /opt
