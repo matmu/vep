@@ -42,7 +42,6 @@ View app specific help section for more details (e.g. singularity run-help --app
     exec vep --dir $CACHE \
         --input_file $1 \
         --output_file $2 \
-        --fasta $3 \
         --species homo_sapiens \
         --assembly GRCh38 \
         --vcf \
@@ -80,13 +79,12 @@ View app specific help section for more details (e.g. singularity run-help --app
         --total_length
     
 %apphelp vep_vcf
-    Args: input.vcf[.gz] outout.vcf reference.fasta
+    Args: input.vcf[.gz] outout.vcf
     Output format: vcf
     Command executed (For parameter explanations see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html) :
     Runs /opt/vep/src/ensembl-vep/vep --dir $CACHE
         --input_file INPUT_FILE
         --output_file OUTPUT_FILE
-        --fasta REFERENCE_FILE
         --species homo_sapiens
         --assembly GRCh38
         --vcf
@@ -127,7 +125,6 @@ View app specific help section for more details (e.g. singularity run-help --app
     exec vep --dir $CACHE \
         --input_file $1 \
         --output_file $2 \
-        --fasta $3 \
         --species homo_sapiens \
         --assembly GRCh38 \
         --tab \
@@ -165,13 +162,12 @@ View app specific help section for more details (e.g. singularity run-help --app
         --total_length
     
 %apphelp vep_tab
-    Args: input.vcf[.gz] outout.txt reference.fasta
+    Args: input.vcf[.gz] outout.txt
     Output format: tab-delimited
     Command executed (For parameter explanations see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html) :
     Runs /opt/vep/src/ensembl-vep/vep --dir $CACHE
         --input_file INPUT_FILE
         --output_file OUTPUT_FILE
-        --fasta REFERENCE_FILE
         --species homo_sapiens
         --assembly GRCh38
         --tab
