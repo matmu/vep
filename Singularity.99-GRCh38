@@ -44,6 +44,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --output_file $2 \
         --species homo_sapiens \
         --assembly GRCh38 \
+        --check_ref \
         --vcf \
         --merged \
         --cache \
@@ -75,8 +76,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --variant_class \
         --total_length \
         --check_existing \
-        --nearest symbol \
-        --total_length
+        --total_length 
     
 %apphelp vep_vcf
     Args: input.vcf[.gz] outout.vcf
@@ -87,6 +87,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --output_file OUTPUT_FILE
         --species homo_sapiens
         --assembly GRCh38
+        --check_ref
         --vcf
         --merged
         --cache
@@ -118,7 +119,6 @@ View app specific help section for more details (e.g. singularity run-help --app
         --variant_class 
         --total_length
         --check_existing
-        --nearest symbol
         --total_length
 
 %apprun vep_tab
@@ -127,6 +127,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --output_file $2 \
         --species homo_sapiens \
         --assembly GRCh38 \
+        --check_ref \
         --tab \
         --merged \
         --cache \
@@ -158,7 +159,6 @@ View app specific help section for more details (e.g. singularity run-help --app
         --variant_class \
         --total_length \
         --check_existing \
-        --nearest symbol \
         --total_length
     
 %apphelp vep_tab
@@ -170,6 +170,7 @@ View app specific help section for more details (e.g. singularity run-help --app
         --output_file OUTPUT_FILE
         --species homo_sapiens
         --assembly GRCh38
+        --check_ref
         --tab
         --merged
         --cache
@@ -201,7 +202,6 @@ View app specific help section for more details (e.g. singularity run-help --app
         --variant_class 
         --total_length
         --check_existing
-        --nearest symbol
         --total_length
 
 %apprun filter_vep
