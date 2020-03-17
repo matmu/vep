@@ -10,6 +10,7 @@ RUN perl INSTALL.pl \
         --PLUGINS all \
         --SPECIES homo_sapiens_merged; \
     vep -id rs699 \
+      --assembly GRCh37 \
       --cache \
       --nearest symbol \
       -o 'STDOUT' \
