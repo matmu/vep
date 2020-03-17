@@ -12,6 +12,7 @@ RUN perl INSTALL.pl \
     vep -id rs699 \
       --cache \
       --nearest symbol \
-      -o /dev/null \
+      -o 'STDOUT' \
       --merged \
-      --no_stats
+      --no_stats \
+      > /dev/null
