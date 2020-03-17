@@ -4,7 +4,6 @@ MAINTAINER Matthias Munz <m.munz@uni-luebeck.de>
 
 RUN perl INSTALL.pl \
         --AUTO fcp \
-        --NO_UPDATE \
         --ASSEMBLY GRCh37 \
         --PLUGINSDIR /opt/vep/.vep/Plugins/ \
         --CACHEDIR /opt/vep/.vep/ \
