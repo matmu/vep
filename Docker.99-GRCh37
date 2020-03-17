@@ -2,4 +2,17 @@ FROM ensemblorg/ensembl-vep:release_99.2
 
 MAINTAINER Matthias Munz <m.munz@uni-luebeck.de>
 
-RUN perl INSTALL.pl --AUTO fcp --NO_UPDATE --ASSEMBLY GRCh37 --PLUGINSDIR /opt/vep/.vep/Plugins/ --CACHEDIR /opt/vep/.vep/ --PLUGINS all --SPECIES homo_sapiens_merged
+RUN perl INSTALL.pl \
+        --AUTO fcp \
+        --NO_UPDATE \
+        --ASSEMBLY GRCh37 \
+        --PLUGINSDIR /opt/vep/.vep/Plugins/ \
+        --CACHEDIR /opt/vep/.vep/ \
+        --PLUGINS all \
+        --SPECIES homo_sapiens_merged; \
+    vep -id rs699 \
+      --cache \
+      --nearest symbol \
+      -o /dev/null \
+      --merged \
+      --no_stats
