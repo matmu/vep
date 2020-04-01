@@ -10,9 +10,11 @@ jobs:
         df -h
         sudo swapoff -a
         sudo rm -f /swapfile
+        sudo apt-get uninstall mono-devel libclang-cpp9 powershell zulu-7-azure-jdk llvm-6.0-dev moby-engine openjdk-11-jre-headless dotnet-sdk-3.1 dotnet-sdk-3.0 llvm-9-dev llvm-8-dev firefox zulu-8-azure-jdk google-chrome-stable libgl1-mesa-dri google-cloud-sdk hhvm zulu-11-azure-jdk zulu-12-azure-jdk azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5
         sudo apt clean
         sudo apt-get autoremove --purge
-        dpkg-query -W --showformat='${Installed-Size;10}\t${Package}\n' | sort -k1,1n
+        #dpkg-query -W --showformat='${Installed-Size;10}\t${Package}\n' | sort -k1,1n
+        docker image ls -a
         df -h
     - name: Build and publish on Dockerhub
       uses: elgohr/Publish-Docker-Github-Action@master
