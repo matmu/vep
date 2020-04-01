@@ -5,3 +5,5 @@
 ```
 singularity build vep.<version>.simg docker://matmu/vep:<version>
 ```
+
+## Run it
