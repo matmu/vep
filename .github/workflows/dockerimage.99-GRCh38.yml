@@ -11,7 +11,8 @@ jobs:
         sudo swapoff -a
         sudo rm -f /swapfile
         sudo apt clean
-        docker rmi $(docker image ls -q)
+        sudo apt-get autoremove
+        sudo apt-get autoremove --purge
         df -h
     - name: Build and publish on Dockerhub
       uses: elgohr/Publish-Docker-Github-Action@master
