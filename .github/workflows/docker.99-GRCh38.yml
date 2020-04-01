@@ -14,7 +14,7 @@ jobs:
         sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox
         sudo apt clean
         sudo apt-get autoremove --purge
-        docker rmi $(docker images | grep " [weeks|weeks]* ago" | awk '{print $3}')
+        docker rmi $(docker images | grep " [hours|weeks]* ago" | awk '{print $3}')
         df -h
     - name: Build and publish on Dockerhub
       uses: elgohr/Publish-Docker-Github-Action@master
