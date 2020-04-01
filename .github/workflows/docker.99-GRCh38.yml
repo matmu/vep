@@ -11,12 +11,10 @@ jobs:
         dpkg-query -Wf '${Package;-40}${Priority}\n' | sort -b -k2,2 -k1,1
         sudo swapoff -a
         sudo rm -f /swapfile
-        #sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /optional/ { print $1 }')
         sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox
         sudo apt clean
         sudo apt-get autoremove --purge
-        #dpkg-query -W --showformat='${Installed-Size;10}\t${Package}\n' | sort -k1,1n
-        docker image ls -a
+        docker rmi $(docker images | grep " [weeks|weeks]* ago" | awk '{print $3}')
         df -h
     - name: Build and publish on Dockerhub
       uses: elgohr/Publish-Docker-Github-Action@master
