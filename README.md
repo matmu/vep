@@ -1,4 +1,5 @@
-# Containerized Variant effect predictor (VEP)
+# Variant effect predictor (VEP)
+Containerized version of VEP.
 
 ## Installation using Singularity
 
