@@ -15,13 +15,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Free disk space
-    run: |
-      df -h
-      sudo swapoff -a
-      sudo rm -f /swapfile
-      sudo apt clean
-      sudo apt-get autoremove --purge
-      docker rmi $(docker image ls -aq)
-      df -h
+      run: |
+        df -h
+        sudo swapoff -a
+        sudo rm -f /swapfile
+        sudo apt clean
+        sudo apt-get autoremove --purge
+        docker rmi $(docker image ls -aq)
+        df -h
     - name: Build and publish the Docker image
-      run: docker build . --file Docker.99-GRCh37 --tag matmu/vep:99-GRCh37
+      run: |
+      docker build . --file Docker.99-GRCh37 --tag matmu/vep:99-GRCh37
