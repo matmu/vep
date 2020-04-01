@@ -1,0 +1,15 @@
+name: Publish Docker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build and publish to dockerhub
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: matmu/vep
+        username: ${{ secrets.DOCKER_USER }}
+        password: ${{ secrets.DOCKER_PASS }}
+        dockerfile: Docker.99-GRCh38
+        tags: "latest,99-GRCh38"
