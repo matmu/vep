@@ -8,13 +8,14 @@ jobs:
     - name: Free disk space
       run: |
         df -h
-        dpkg-query -Wf '${Package;-40}${Priority}\n' | sort -b -k2,2 -k1,1
         sudo swapoff -a
         sudo rm -f /swapfile
         sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox
         sudo apt clean
         sudo apt-get autoremove --purge
         docker rmi $(docker images | grep " [hours|weeks]* ago" | awk '{print $3}')
+        docker image ls -a
+        docker container ls -a
         df -h
     - name: Build and publish on Dockerhub
       uses: elgohr/Publish-Docker-Github-Action@master
