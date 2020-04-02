@@ -13,7 +13,7 @@ jobs:
         sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox
         sudo apt clean
         sudo apt-get autoremove --purge
-        docker rmi $(docker images | grep " [hours|weeks|monts|years]* ago" | awk '{print $3}')
+        docker rmi $(docker images | grep " [hours|weeks|months|years]* ago" | awk '{print $3}')
         docker image ls -a
         docker container ls -a
         df -h
