@@ -14,8 +14,8 @@ jobs:
         sudo apt clean
         sudo apt-get autoremove --purge
         docker image ls -a
-        docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll"
-        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll" | awk '{print $3}')
+        docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure"
+        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure" | awk '{print $3}')
         docker image ls -a
         docker container ls -a
         df -h
