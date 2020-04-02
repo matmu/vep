@@ -11,7 +11,8 @@ jobs:
         dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
         sudo swapoff -a
         sudo rm -f /swapfile
-        sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 dotnet-sdk-3.0 hhvm zulu-11-azure-jdk zulu-12-azure-jdk azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5
+        sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm zulu-11-azure-jdk zulu-12-azure-jdk azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5
+        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /optional/ { print $1 }')
         sudo apt clean
         sudo apt-get autoremove --purge
         docker image ls -a
