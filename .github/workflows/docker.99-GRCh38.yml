@@ -14,7 +14,7 @@ jobs:
         sudo apt clean
         sudo apt-get autoremove --purge
         docker image ls -a
-        docker images | grep -v $'docker\|minute\|alpine\azure' | grep -v "none"
+        docker images | grep -v $'docker\|minute\|alpine\|azure' | grep -v "none"
         docker rmi $(docker images | grep -v $'docker\|minute\|alpine\|azure' | grep -v "none" | awk '{print $3}')
         docker image ls -a
         docker container ls -a
