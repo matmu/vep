@@ -5,18 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Free disk space
+    - name: Check disk space
       run: |
-        df -h
-        sudo swapoff -a
-        sudo rm -f /swapfile
-        sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 dotnet-sdk-3.0 hhvm zulu-11-azure-jdk zulu-12-azure-jdk azure-cli
-        sudo apt clean
-        sudo apt-get autoremove --purge
-        docker image ls -a
-        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine" | awk '{print $3}')
-        docker image ls -a
-        docker container ls -a
         df -h
     - name: Build and publish on Dockerhub
       uses: elgohr/Publish-Docker-Github-Action@master
