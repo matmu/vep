@@ -2,7 +2,7 @@ name: Publish Docker
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@master
     - name: Check disk space
