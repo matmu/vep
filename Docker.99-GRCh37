@@ -8,9 +8,10 @@ RUN perl INSTALL.pl \
         --PLUGINSDIR /opt/vep/.vep/Plugins/ \
         --CACHEDIR /opt/vep/.vep/ \
         --PLUGINS all \
-        --SPECIES homo_sapiens_merged; \
+        --SPECIES homo_sapiens_merged && \
     vep -id rs699 \
       --assembly GRCh37 \
+      --port 3337 \
       --cache \
       --nearest symbol \
       -o 'STDOUT' \
