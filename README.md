@@ -36,16 +36,29 @@ For further option explanations on VEP visit http://uswest.ensembl.org/info/docs
 singularity exec vep.<version>.simg vep \
         --merged \
         --id rs699
-        --cache \
-        --offline
+        --cache
 ```
 
-#### Minimum
+#### Minimum with compressed tab as output format
 ```bash
 singularity exec vep.<version>.simg vep \
         --merged \
         --cache \
-        --offline
+        --input_file <filename>.vcf[.gz] \
+        --output_file <filename>.txt.gz \
+        --tab \
+        --compress_output bgzip
+```
+
+
+#### Minimum with compressed VCF as output format
+```bash
+singularity exec vep.<version>.simg vep \
+        --merged \
+        --cache \
+        --input_file <filename>.vcf[.gz] \
+        --output_file <filename>.vcf.gz \
+        --compress_output bgzip
 ```
 
 #### Full
@@ -53,8 +66,6 @@ singularity exec vep.<version>.simg vep \
 singularity exec vep.<version>.simg vep \
         --input_file <input_vcf> \
         --output_file <output_vcf> \
-        --species homo_sapiens \
-        --assembly GRCh38 \
         --check_ref \
         --tab \
         --merged \
@@ -87,7 +98,8 @@ singularity exec vep.<version>.simg vep \
         --variant_class \
         --total_length \
         --check_existing \
-        --total_length
+        --total_length \
+        --nearest symbol
 ```
 
 
