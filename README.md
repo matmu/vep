@@ -19,12 +19,11 @@ Visit https://hub.docker.com/r/matmu/vep/tags to get a list of all available ver
 ## Run VEP from Singularity image
 To run VEP execute
 ```bash
-singularity exec vep.<version>.simg vep [options]
+singularity exec vep.<version>.simg vep --merged [options]
 ```
-whereby `<version>` is replaced by a respective version (see above), e.g. `99-CRCh38`. Please **always** use the VEP option `--merged` because only the cache for "merged" is included in the image. 
+whereby `<version>` is replaced by a respective version (see above), e.g. `99-CRCh38`. Please **always** use the VEP option `--merged` because only the merged cache including both RefSeq and Ensembl transcripts is installed in the image. 
 
-
-### Options
+### More options
 For further option explanations on VEP visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html. The options for base cache/plugin directories, species and assembly are set to the right values by default.
 
 ### Examples
