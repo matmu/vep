@@ -31,10 +31,7 @@ For further option explanations on VEP visit http://uswest.ensembl.org/info/docs
 
 #### Test
 ```bash
-singularity exec vep.<version>.simg vep \
-        --merged \
-        --id rs699
-        --cache
+singularity exec vep.<version>.simg vep --merged --cache --id rs699        
 ```
 
 #### Minimum with compressed tab as output format
