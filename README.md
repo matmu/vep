@@ -8,7 +8,7 @@ This documentation describes the usage of Docker images containing tool Ensembl 
 The images are available on Dockerhub at https://hub.docker.com/r/matmu/vep.
 
 
-## Building imge using Singularity
+## Building image using Singularity
 ```bash
 singularity build vep.<version>.simg docker://matmu/vep:<version>
 ```
@@ -18,7 +18,7 @@ singularity build vep.<version>.simg docker://matmu/vep:<version>
 Visit https://hub.docker.com/r/matmu/vep/tags to get a list of all available versions.
 
 
-## Run VEP
+## Run VEP from Singularity image
 To run VEP execute
 ```bash
 singularity exec vep.<version>.simg vep [options]
