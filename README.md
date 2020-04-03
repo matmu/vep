@@ -9,7 +9,7 @@ The images are available on Dockerhub at https://hub.docker.com/r/matmu/vep.
 
 
 ## Building imge using Singularity
-```
+```bash
 singularity build vep.<version>.simg docker://matmu/vep:<version>
 ```
 
@@ -18,37 +18,80 @@ singularity build vep.<version>.simg docker://matmu/vep:<version>
 Visit https://hub.docker.com/r/matmu/vep/tags to get a list of all available versions.
 
 
-## Run
+## Run VEP
 To run VEP execute
-```
+```bash
 singularity exec vep.<version>.simg vep [options]
 ```
 whereby `<version>` is replaced by a respective version (see above), e.g. `99-CRCh38`. Please **always** use the VEP option `--merged` because only the cache for "merged" is included in the image. 
 
 
-## VEP parameters
-For further parameter explanation on vep and other information see http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html.
+### Options
+For further option explanations on VEP visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html.
 
-Available apps are `vep`, `vep_vcf`, `vep_tab` and `filter_vep`. Examples for running these apps are given below.
+### Examples
+
+#### Minimum
+```bash
+singularity exec vep.<version>.simg vep \
+        --species homo_sapiens \
+        --assembly GRCh38 \
+        --merged \
+        --cache \
+        --offline
+```
+
+```bash
+singularity exec vep.<version>.simg vep \
+        --input_file <input_vcf> \
+        --output_file <output_vcf> \
+        --species homo_sapiens \
+        --assembly GRCh38 \
+        --check_ref \
+        --tab \
+        --merged \
+        --cache \
+        --offline \
+        --verbose \
+        --force_overwrite \
+        --sift b \
+        --polyphen b \
+        --ccds \
+        --uniprot \
+        --hgvs \
+        --symbol \
+        --numbers \
+        --domains \
+        --regulatory \
+        --canonical \
+        --protein \
+        --biotype \
+        --uniprot \
+        --tsl \
+        --appris \
+        --gene_phenotype \
+        --af \
+        --af_1kg \
+        --af_esp \
+        --af_gnomad \
+        --max_af \
+        --pubmed \
+        --variant_class \
+        --total_length \
+        --check_existing \
+        --total_length
+```
 
 
 ## Filtering by VEP annotations
 The image also includes a VEP filtering script which can be executed by
+```bash
+singularity exec vep.<version>.simg filter_vep [options]
 ```
-singularity exec vep.<version>.simg [options]
+
+### Options
+
+### Examples
+```bash
+singularity exec vep.<version>.simg filter_vep
 ```
-
-
-## Examples
-
-### 
-
-
-
-```singularity run --app vep_vcf <input.vcf[.gz]> <outout.vcf> <image_name>```
-
-```singularity run --app vep_tab <input.vcf[.gz]> <outout.txt> <image_name>```
-
-```singularity run --app filter_vep <image_name>```
-
-The parameter `<input.vcf[.gz]>` is the input file and `<outout.vcf>` is the name of the output file that will be created.
