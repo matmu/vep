@@ -31,6 +31,8 @@ For further option explanations on VEP visit http://uswest.ensembl.org/info/docs
 
 ### Examples
 
+#### Test
+
 #### Minimum
 ```bash
 singularity exec vep.<version>.simg vep \
@@ -41,6 +43,7 @@ singularity exec vep.<version>.simg vep \
         --offline
 ```
 
+#### Full
 ```bash
 singularity exec vep.<version>.simg vep \
         --input_file <input_vcf> \
