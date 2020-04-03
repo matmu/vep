@@ -27,17 +27,22 @@ whereby `<version>` is replaced by a respective version (see above), e.g. `99-CR
 
 
 ### Options
-For further option explanations on VEP visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html.
+For further option explanations on VEP visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html. The options for base cache/plugin directories, species and assembly are set to the right values by default.
 
 ### Examples
 
 #### Test
+```bash
+singularity exec vep.<version>.simg vep \
+        --merged \
+        --id rs699
+        --cache \
+        --offline
+```
 
 #### Minimum
 ```bash
 singularity exec vep.<version>.simg vep \
-        --species homo_sapiens \
-        --assembly GRCh38 \
         --merged \
         --cache \
         --offline
