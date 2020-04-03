@@ -1,5 +1,5 @@
 # Variant effect predictor (VEP)
-This documentation describes the usage of Docker images at https://hub.docker.com/r/matmu/vep containing Ensembl Variant effect predictor (VEP) for annotating genetic variants. The image comes with
+This documentation describes the usage of the Docker image at https://hub.docker.com/r/matmu/vep which contains the bioinformatics tool **Ensembl Variant effect predictor (VEP)** for annotating genetic variants. The image comes with
 
 * Merged cache including RefSeq and Ensembl transcripts (VEP parameter --merged required)
 * Reference genome and index
