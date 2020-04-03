@@ -24,7 +24,9 @@ singularity exec vep.<version>.simg vep --merged [options]
 whereby `<version>` is replaced by a respective version (see above), e.g. `99-CRCh38`. Please **always** use the VEP option `--merged` because only the merged cache including both RefSeq and Ensembl transcripts is installed in the image. 
 
 ### More options
-For further option explanations on VEP visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html. The options for base cache/plugin directories, species and assembly are set to the right values by default.
+The options for base cache/plugin directories, species and assembly are set to the right values by default and do not need to be set by the user.
+
+Visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html for detailed information about all VEP options. Detailed information about input/output data formats can be found at https://www.ensembl.org/info/docs/tools/vep/vep_formats.html#defaultout. 
 
 ### Examples
 
@@ -63,8 +65,11 @@ singularity exec vep.<version>.simg filter_vep [options]
 ```
 
 ### Options
+Visit https://www.ensembl.org/info/docs/tools/vep/script/vep_filter.html for detailed info about available options.
+
 
 ### Examples
+#### Filter for rare variants
 ```bash
-singularity exec vep.<version>.simg filter_vep
+singularity exec vep.<version>.simg filter_vep --input_file <filename>.vcf --output_file <filename>.filtered.vcf --only_matched --filter "(IMPACT is HIGH or IMPACT is MODERATE or IMPACT is LOW) and (BIOTYPE is protein_coding) and ((PolyPhen > 0.446) or (SIFT < 0.05)) and (EUR_AF < 0.001 or gnomAD_NFE_AF < 0.001 or (not EUR_AF and not gnomAD_NFE_AF))" 
 ```
