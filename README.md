@@ -34,7 +34,7 @@ For further option explanations on VEP visit http://uswest.ensembl.org/info/docs
 singularity exec vep.<version>.simg vep --merged --cache --id rs699        
 ```
 
-#### Minimum with compressed tab as output format
+#### Minimum (output format: compress tab)
 ```bash
 singularity exec vep.<version>.simg vep \
         --merged \
@@ -46,55 +46,14 @@ singularity exec vep.<version>.simg vep \
 ```
 
 
-#### Minimum with compressed VCF as output format
+#### Minimum (output format: compressed vcf)
 ```bash
-singularity exec vep.<version>.simg vep \
-        --merged \
-        --cache \
-        --input_file <filename>.vcf[.gz] \
-        --output_file <filename>.vcf.gz \
-        --compress_output bgzip
+singularity exec vep.<version>.simg vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip
 ```
 
-#### Full
+#### Full annotation
 ```bash
-singularity exec vep.<version>.simg vep \
-        --input_file <input_vcf> \
-        --output_file <output_vcf> \
-        --check_ref \
-        --tab \
-        --merged \
-        --cache \
-        --offline \
-        --verbose \
-        --force_overwrite \
-        --sift b \
-        --polyphen b \
-        --ccds \
-        --uniprot \
-        --hgvs \
-        --symbol \
-        --numbers \
-        --domains \
-        --regulatory \
-        --canonical \
-        --protein \
-        --biotype \
-        --uniprot \
-        --tsl \
-        --appris \
-        --gene_phenotype \
-        --af \
-        --af_1kg \
-        --af_esp \
-        --af_gnomad \
-        --max_af \
-        --pubmed \
-        --variant_class \
-        --total_length \
-        --check_existing \
-        --total_length \
-        --nearest symbol
+singularity exec vep.<version>.simg vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip --everything --nearest symbol        
 ```
 
 
