@@ -1,14 +1,14 @@
 # Containerized Variant Effect Predictor (VEP) + Cache GRCh37/38
 
-&nbsp;+ [Introduction](#Introduction)
-&nbsp;+ [Building image with Singularity](#Building-image-with-Singularity)
-&nbsp;+ [Run VEP](#Run-VEP)
-&nbsp;|-- [More options](#More-options)
-&nbsp;|-- [Examples](#Examples)
-&nbsp;+ [Filtering by VEP annotations](#Filtering-by-VEP-annotations)
-&nbsp;|-- [Options](#Options)
-&nbsp;|-- [Filtering examples](#Filtering-examples)
-&nbsp;+ [VEP plugins](#VEP-plugins)
+&nbsp;+ [Introduction](#Introduction) \
+&nbsp;+ [Building image with Singularity](#Building-image-with-Singularity) \
+&nbsp;+ [Run VEP](#Run-VEP) \
+&nbsp;|-- [More options](#More-options) \
+&nbsp;|-- [Examples](#Examples) \
+&nbsp;+ [Filtering by VEP annotations](#Filtering-by-VEP-annotations) \
+&nbsp;|-- [Options](#Options) \
+&nbsp;|-- [Filtering examples](#Filtering-examples) \
+&nbsp;+ [VEP plugins](#VEP-plugins) \
 &nbsp;+ [Build & run VEP with Docker](#Build-&-run-VEP-with-Docker)
 
 
