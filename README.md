@@ -3,11 +3,11 @@
 &nbsp;+ [Introduction](#Introduction) \
 &nbsp;+ [Building image with Singularity](#Building-image-with-Singularity) \
 &nbsp;+ [Run VEP](#Run-VEP) \
-&nbsp;|-- [More options](#More-options) \
-&nbsp;|-- [Examples](#Examples) \
+&nbsp;&nbsp;|-- [More options](#More-options) \
+&nbsp;&nbsp;|-- [Examples](#Examples) \
 &nbsp;+ [Filtering by VEP annotations](#Filtering-by-VEP-annotations) \
-&nbsp;|-- [Options](#Options) \
-&nbsp;|-- [Filtering examples](#Filtering-examples) \
+&nbsp;&nbsp;|-- [Options](#Options) \
+&nbsp;&nbsp;|-- [Filtering examples](#Filtering-examples) \
 &nbsp;+ [VEP plugins](#VEP-plugins) \
 &nbsp;+ [Build & run VEP with Docker](#Build-&-run-VEP-with-Docker)
 
