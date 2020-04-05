@@ -1,7 +1,7 @@
 # Containerized Variant Effect Predictor (VEP) + Cache GRCh37/38
 
-+ [Introduction](#Introduction) \
-+ [Building image with Singularity](#Building-image-with-Singularity)\
++ [Introduction](#Introduction)
++ [Building image with Singularity](#Building-image-with-Singularity)
 + [Run VEP](#Run-VEP)\
 |-- [More options](#More-options)\
 |-- [Examples](#Examples)\
