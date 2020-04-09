@@ -95,7 +95,25 @@ TODO
 
 
 ## Build & run VEP with Docker
-TODO
+To create and start the container in docker use 
+
+```
+docker run -it --name vep.<version> matmu/vep:<version>
+```
+The option `name` does not have do be used as there is always a default name for a new container but is quite useful for later references. If the image was not downloaded before this will automatically be done in this step.
+
+The usage is similar to the one in singularity. It must be ensured that the container is running. If that is the case, then 
+```bash
+docker exec -it vep.<version> [command]
+```
+can be executed. Commands are the same as in the Singularity section.
+
+###Example usage
+
+```bash
+docker exec vep.<version> vep --merged --cache --id rs699
+```
+
 
 
 
