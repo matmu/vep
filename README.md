@@ -9,7 +9,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;|-- [Options](#Options) \
 &nbsp;&nbsp;&nbsp;&nbsp;|-- [Filtering examples](#Filtering-examples) \
 &nbsp;+ [VEP plugins](#VEP-plugins) \
-&nbsp;+ [Build & run VEP with Docker](#Build-and-run-VEP-with-Docker)
+&nbsp;+ [Build & run VEP with Docker](#Build-and-run-VEP-with-Docker) \
+&nbsp;+ [Acknowledgements](#Acknowledgments) \
 
 
 
@@ -97,5 +98,6 @@ docker run -v /path/to/dir:/opt/data matmu/vep vep [options]
 ```
 
 
-
+## Acknowledgments
+This document has been created by Julia Remes & Matthias Munz, University of Lübeck, Germany.
 
