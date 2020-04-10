@@ -108,7 +108,7 @@ docker exec -it vep.<version> [command]
 ```
 can be executed. Commands are the same as in the Singularity section.
 
-###Example usage
+### Example usage
 
 ```bash
 docker exec vep.<version> vep --merged --cache --id rs699
