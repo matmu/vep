@@ -87,14 +87,13 @@ singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline -
 
 ## Build & run VEP with Docker
 To pull the image and run the container with Docker use 
-
 ```
 docker run matmu/vep:<version> vep [options]
 ```
 
-Unlike Singularity, the directories of **Plugin** annotations files for have to be explicitely bound to a target directory (e.g. `/opt/data`) within the container.
+Unlike Singularity, the directories of **Plugin** annotation files (e.g. `/path/to/dir`) have to be explicitely bound to a target directory (e.g. `/opt/data`) within the container with option `-v`:
 ```
-docker run -v /path/to/annotation_dir:/opt/data matmu/vep vep [options]
+docker run -v /path/to/dir:/opt/data matmu/vep vep [options]
 ```
 
 
