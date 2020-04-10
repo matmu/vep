@@ -28,7 +28,7 @@ singularity build vep.<version>.simg docker://matmu/vep:<version>
 
 `<version>` is a tag representing the Ensembl version and the species + version of the reference genome. Examples for available versions are **99-GRCh38** (VEP v99 with cache for reference GRCh38) or **99-GRh37** (VEP v99 and cache for reference GRCh37). The version **latest** is always the most recent Ensembl version with cache for reference GRCh38. 
 
-Visit https://hub.docker.com/r/matmu/vep/tags to get a list of all available versions.
+Visit https://hub.docker.com/r/matmu/vep/tags to get a list of all **available versions**.
 
 
 ## Run VEP
