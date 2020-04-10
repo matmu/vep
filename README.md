@@ -45,25 +45,20 @@ Visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html for 
 
 ### Examples
 
-#### Test
-```bash
-singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --id rs699        
-```
-
 #### Minimum (output format: compress tab)
 ```bash
-singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.txt.gz --tab --compress_output bgzip
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.txt.gz --tab --compress_output bgzip
 ```
 
 
 #### Minimum (output format: compressed vcf)
 ```bash
-singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip
 ```
 
 #### Full annotation
 ```bash
-singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip --everything --nearest symbol        
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip --everything --nearest symbol        
 ```
 
 
@@ -85,7 +80,7 @@ singularity exec vep.<version>.simg filter_vep --input_file <filename>.vcf --out
 
 
 ## VEP plugins
-TODO
+VEP allows several other annotations sources (aka Plugins). Their respective Perl modules are included in the image, the annotation files have to be added seperately, however. The list of plugins as well as instructions on how to download and pre-process the annotation files can be found at: http://www.ensembl.org/info/docs/tools/vep/script/vep_plugins.html.
 
 
 ## Build & run VEP with Docker
@@ -105,7 +100,7 @@ can be executed. Commands are the same as in the Singularity section.
 ### Example usage
 
 ```bash
-docker exec vep.<version> vep --dir /opt/vep/.vep --merged --cache --id rs699
+docker exec vep.<version> vep --dir /opt/vep/.vep --merged --offline --cache --id rs699
 ```
 
 
