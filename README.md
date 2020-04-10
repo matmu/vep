@@ -13,7 +13,6 @@
 &nbsp;+ [Acknowledgements](#Acknowledgments)
 
 
-
 ## Introduction
 This documentation describes the usage of the Docker image at https://hub.docker.com/r/matmu/vep which contains the bioinformatics tool **Ensembl Variant effect predictor (VEP)** for annotating genetic variants. The image comes with
 
