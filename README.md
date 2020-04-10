@@ -10,7 +10,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;|-- [Filtering examples](#Filtering-examples) \
 &nbsp;+ [VEP plugins](#VEP-plugins) \
 &nbsp;+ [Build & run VEP with Docker](#Build-and-run-VEP-with-Docker) \
-&nbsp;+ [Acknowledgements](#Acknowledgments) \
+&nbsp;+ [Acknowledgements](#Acknowledgments)
 
 
 
