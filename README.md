@@ -47,29 +47,23 @@ Visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html for 
 
 #### Test
 ```bash
-singularity exec vep.<version>.simg vep --merged --cache --id rs699        
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --id rs699        
 ```
 
 #### Minimum (output format: compress tab)
 ```bash
-singularity exec vep.<version>.simg vep \
-        --merged \
-        --cache \
-        --input_file <filename>.vcf[.gz] \
-        --output_file <filename>.txt.gz \
-        --tab \
-        --compress_output bgzip
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.txt.gz --tab --compress_output bgzip
 ```
 
 
 #### Minimum (output format: compressed vcf)
 ```bash
-singularity exec vep.<version>.simg vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip
 ```
 
 #### Full annotation
 ```bash
-singularity exec vep.<version>.simg vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip --everything --nearest symbol        
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip --everything --nearest symbol        
 ```
 
 
@@ -100,9 +94,9 @@ To create and start the container in docker use
 ```
 docker run -it --name vep.<version> matmu/vep:<version>
 ```
-The option `name` does not have do be used as there is always a default name for a new container but is quite useful for later references. If the image was not downloaded before this will automatically be done in this step.
+The option `name` does not have do be used as there is always a default name for a new container but it is quite useful for later references. If the image was not downloaded before this command is executed, it will automatically be done in this step.
 
-The usage is similar to the one in singularity. It must be ensured that the container is running. If that is the case, then 
+The usage is similar to the one in Singularity. It must be ensured that the container is running. If that is the case, then 
 ```bash
 docker exec -it vep.<version> [command]
 ```
@@ -111,7 +105,7 @@ can be executed. Commands are the same as in the Singularity section.
 ### Example usage
 
 ```bash
-docker exec vep.<version> vep --merged --cache --id rs699
+docker exec vep.<version> vep --dir /opt/vep/.vep --merged --cache --id rs699
 ```
 
 
