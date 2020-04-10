@@ -9,7 +9,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;|-- [Options](#Options) \
 &nbsp;&nbsp;&nbsp;&nbsp;|-- [Filtering examples](#Filtering-examples) \
 &nbsp;+ [VEP plugins](#VEP-plugins) \
-&nbsp;+ [Build & run VEP with Docker](#Build-&-run-VEP-with-Docker)
+&nbsp;+ [Build & run VEP with Docker](#Build-\&-run-VEP-with-Docker)
 
 
 
