@@ -45,22 +45,20 @@ Visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html for 
 
 ### Examples
 
-#### Minimum (output format: compress tab)
+#### Minimum (output format: compress tab delimited)
 ```bash
 singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.txt.gz --tab --compress_output bgzip
 ```
 
-
 #### Minimum (output format: compressed vcf)
 ```bash
-singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --vcf --compress_output bgzip
 ```
 
 #### Full annotation
 ```bash
 singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip --everything --nearest symbol        
 ```
-
 
 ## Filtering by VEP annotations
 The image also includes a VEP filtering script which can be executed by
@@ -81,6 +79,10 @@ singularity exec vep.<version>.simg filter_vep --input_file <filename>.vcf --out
 
 ## VEP plugins
 VEP allows several other annotations sources (aka Plugins). Their respective Perl modules are included in the image, the annotation files have to be added seperately, however. The list of plugins as well as instructions on how to download and pre-process the annotation files can be found at: http://www.ensembl.org/info/docs/tools/vep/script/vep_plugins.html.
+
+```bash
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.txt.gz --tab --compress_output bgzip --plugin CADD,/path/to/ALL.TOPMed_freeze5_hg38_dbSNP.tsv.gz
+```
 
 
 ## Build & run VEP with Docker
