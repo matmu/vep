@@ -86,23 +86,15 @@ singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline -
 
 
 ## Build & run VEP with Docker
-To create and start the container in docker use 
+To pull the image and run the container with Docker use 
 
 ```
-docker run -it --name vep.<version> matmu/vep:<version>
+docker run matmu/vep:<version> vep [options]
 ```
-The option `name` does not have do be used as there is always a default name for a new container but it is quite useful for later references. If the image was not downloaded before this command is executed, it will automatically be done in this step.
 
-The usage is similar to the one in Singularity. It must be ensured that the container is running. If that is the case, then 
-```bash
-docker exec -it vep.<version> [command]
+Unlike Singularity, the directories of **Plugin** annotations files for have to be explicitely bound to a target directory (e.g. `/opt/data`) within the container.
 ```
-can be executed. Commands are the same as in the Singularity section.
-
-### Example usage
-
-```bash
-docker exec vep.<version> vep --dir /opt/vep/.vep --merged --offline --cache --id rs699
+docker run -v /path/to/annotation_dir:/opt/data matmu/vep vep [options]
 ```
 
 
