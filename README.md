@@ -9,7 +9,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;|-- [Options](#Options) \
 &nbsp;&nbsp;&nbsp;&nbsp;|-- [Filtering examples](#Filtering-examples) \
 &nbsp;+ [VEP plugins](#VEP-plugins) \
-&nbsp;+ [Build & run VEP with Docker](#Build-\&-run-VEP-with-Docker)
+&nbsp;+ [Build & run VEP with Docker](#Build-and-run-VEP-with-Docker)
 
 
 
@@ -85,7 +85,7 @@ singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline -
 ```
 
 
-## Build & run VEP with Docker
+## Build and run VEP with Docker
 To pull the image and run the container with Docker use 
 ```
 docker run matmu/vep:<version> vep [options]
