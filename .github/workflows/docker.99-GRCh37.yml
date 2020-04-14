@@ -1,5 +1,7 @@
 name: Build and publish 99-GRCh37
-on: [push]
+on:
+    schedule:
+    - cron:  '0 0 * * SUN'
 jobs:
   build:
     runs-on: ubuntu-latest
