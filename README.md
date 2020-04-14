@@ -1,4 +1,5 @@
 # Containerized Variant Effect Predictor (VEP) + Cache
+[![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?hashtags=Ensembl,VEP,Singularity,Docker&url=https://github.com/matmu/vep&screen_name=_matmu)
 
 &nbsp;+ [Introduction](#Introduction) \
 &nbsp;+ [Building image with Singularity](#Building-image-with-Singularity) \
@@ -98,5 +99,5 @@ docker run -v /path/to/dir:/opt/data matmu/vep vep [options]
 
 
 ## Acknowledgments
-This document has been created by Julia Remes & Matthias Munz, University of Lübeck, Germany.
+This document has been created by **Julia Remes** & **Matthias Munz**, **University of Lübeck**, **Germany**.
 
