@@ -1,4 +1,4 @@
-name: Publish Docker
+name: Build and publish 99-GRCh37
 on:
   schedule:
     - cron:  '0 0 * * SUN'
