@@ -1,4 +1,4 @@
-# Containerized Variant Effect Predictor (VEP) + Cache GRCh37/38
+# Containerized Variant Effect Predictor (VEP) + Cache
 
 &nbsp;+ [Introduction](#Introduction) \
 &nbsp;+ [Building image with Singularity](#Building-image-with-Singularity) \
