@@ -1,6 +1,6 @@
 # Containerized Variant Effect Predictor (VEP) + Cache
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?hashtags=Ensembl,VEP,Singularity,Docker&url=https://github.com/matmu/vep)
-![99-GRCh37](https://github.com/matmu/vep/.github/workflows/docker.99-GRCh37.yml/badge.svg)
+![](https://github.com/matmu/vep/.github/workflows/docker.99-GRCh37.yml/badge.svg)
 
 &nbsp;+ [Introduction](#Introduction) \
 &nbsp;+ [Building image with Singularity](#Building-image-with-Singularity) \
