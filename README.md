@@ -45,7 +45,7 @@ Visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html for 
 
 ### Examples
 
-#### Minimum (output format: compress tab delimited)
+#### Minimum (output format: compressed tab delimited)
 ```bash
 singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.txt.gz --tab --compress_output bgzip
 ```
