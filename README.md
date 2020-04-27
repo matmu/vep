@@ -61,7 +61,7 @@ singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline -
 
 #### Full annotation
 ```bash
-singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --compress_output bgzip --everything --nearest symbol        
+singularity exec vep.<version>.simg vep --dir /opt/vep/.vep --merged --offline --cache --input_file <filename>.vcf[.gz] --output_file <filename>.vcf.gz --vcf --compress_output bgzip --everything --nearest symbol        
 ```
 
 ## Filtering by VEP annotations
