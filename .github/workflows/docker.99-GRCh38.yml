@@ -1,7 +1,5 @@
 name: 99-GRCh38
 on:
-  schedule:
-  - cron:  '0 0 * * MON'
 jobs:
   build:
     runs-on: ubuntu-latest
