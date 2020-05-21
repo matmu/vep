@@ -1,6 +1,6 @@
-FROM ensemblorg/ensembl-vep:release_100.0
+FROM ensemblorg/ensembl-vep:release_100.1
 
-MAINTAINER Matthias Munz <m.munz@uni-luebeck.de>
+MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
 RUN perl INSTALL.pl \
         --AUTO fcp \
