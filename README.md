@@ -47,7 +47,7 @@ whereby `<version>` is replaced by a respective version (see above), e.g. `99-CR
 ### More options
 The options for base cache/plugin directories, species and assembly are set to the right values by default and do not need to be set by the user.
 
-Visit http://uswest.ensembl.org/info/docs/tools/vep/script/vep_options.html for detailed information about all VEP options. Detailed information about **input/output formats** can be found at https://www.ensembl.org/info/docs/tools/vep/vep_formats.html#defaultout. 
+Visit http://www.ensembl.org/info/docs/tools/vep/script/vep_options.html for detailed information about all VEP options. Detailed information about **input/output formats** can be found at https://www.ensembl.org/info/docs/tools/vep/vep_formats.html#defaultout. 
 
 ### Examples
 
