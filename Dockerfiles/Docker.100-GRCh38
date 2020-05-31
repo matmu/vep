@@ -1,4 +1,4 @@
-FROM ensemblorg/ensembl-vep:release_100.1
+FROM ensemblorg/ensembl-vep:release_100.2
 
 MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
