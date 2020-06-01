@@ -10,6 +10,7 @@ RUN perl INSTALL.pl \
         --PLUGINS all \
         --SPECIES mus_musculus_merged && \
     vep -id rs27096498 \
+      --species mus_musculus \
       --cache \
       --nearest symbol \
       -o 'STDOUT' \
