@@ -2,6 +2,7 @@
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?hashtags=Ensembl,VEP,Singularity,Docker&url=https://github.com/matmu/vep)
 ![100-GRCh38](https://github.com/matmu/vep/workflows/100-GRCh38/badge.svg)
 ![100-GRCh37](https://github.com/matmu/vep/workflows/100-GRCh37/badge.svg)
+![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
 ![99-GRCh38](https://github.com/matmu/vep/workflows/99-GRCh38/badge.svg)
 ![99-GRCh37](https://github.com/matmu/vep/workflows/99-GRCh37/badge.svg)
 
