@@ -1,7 +1,5 @@
 name: 100-GRCm38
-on:
-  schedule:
-  - cron:  '0 */6 * * *'
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
