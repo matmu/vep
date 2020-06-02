@@ -1,13 +1,6 @@
 # Containerized Variant Effect Predictor (VEP) + Cache
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?hashtags=Ensembl,VEP,Singularity,Docker&url=https://github.com/matmu/vep)
 
-**Human:** ![100-GRCh38](https://github.com/matmu/vep/workflows/100-GRCh38/badge.svg)
-![100-GRCh37](https://github.com/matmu/vep/workflows/100-GRCh37/badge.svg)
-![99-GRCh38](https://github.com/matmu/vep/workflows/99-GRCh38/badge.svg)
-![99-GRCh37](https://github.com/matmu/vep/workflows/99-GRCh37/badge.svg)\
-**Mouse:** ![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
-
-
 &nbsp;+ [Introduction](#Introduction) \
 &nbsp;+ [Building image with Singularity](#Building-image-with-Singularity) \
 &nbsp;+ [Run VEP](#Run-VEP) \
@@ -19,6 +12,14 @@
 &nbsp;+ [VEP plugins](#VEP-plugins) \
 &nbsp;+ [Build & run VEP with Docker](#Build-and-run-VEP-with-Docker) \
 &nbsp;+ [Acknowledgements](#Acknowledgments)
+
+
+## Available versions
+**Human:** ![100-GRCh38](https://github.com/matmu/vep/workflows/100-GRCh38/badge.svg)
+![100-GRCh37](https://github.com/matmu/vep/workflows/100-GRCh37/badge.svg)
+![99-GRCh38](https://github.com/matmu/vep/workflows/99-GRCh38/badge.svg)
+![99-GRCh37](https://github.com/matmu/vep/workflows/99-GRCh37/badge.svg)\
+**Mouse:** ![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
 
 
 ## Introduction
