@@ -21,6 +21,8 @@
 ![99-GRCh37](https://github.com/matmu/vep/workflows/99-GRCh37/badge.svg)\
 **Mouse:** ![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
 
+If you require a container for a species not mentioned above, feel free to contact us or even better, create an issue.
+
 
 ## Introduction
 This documentation describes the usage of the Docker image at https://hub.docker.com/r/matmu/vep which contains the bioinformatics tool **Ensembl Variant effect predictor (VEP)** for annotating genetic variants. The image comes with
