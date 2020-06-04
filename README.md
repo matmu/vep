@@ -45,7 +45,7 @@ To run VEP execute
 ```bash
 singularity exec vep.<version>.simg vep --merged [options]
 ```
-whereby `<version>` is replaced by a respective version (see above), e.g. `99-CRCh38`. Please **always** use the VEP option `--merged` because only the merged cache including both RefSeq and Ensembl transcripts is installed in the image. 
+whereby `<version>` is replaced by a respective version (see above), e.g. `99-CRCh38`. Please **always** use the VEP option `--merged` because only the merged cache including both RefSeq and Ensembl transcripts is installed in the image. For species except homo sapiens, also the parameter `--species` (e.g. `--species mus_musculus`), has to be set as well.
 
 ### More options
 The options for base cache/plugin directories, species and assembly are set to the right values by default and do not need to be set by the user.
@@ -53,6 +53,7 @@ The options for base cache/plugin directories, species and assembly are set to t
 Visit http://www.ensembl.org/info/docs/tools/vep/script/vep_options.html for detailed information about all VEP options. Detailed information about **input/output formats** can be found at https://www.ensembl.org/info/docs/tools/vep/vep_formats.html#defaultout. 
 
 ### Examples
+Note: For species except homo sapiens, the parameter `--species` (e.g. `--species mus_musculus`), has to be set as well.
 
 #### Minimum (output format: compressed tab delimited)
 ```bash
