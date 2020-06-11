@@ -4,15 +4,15 @@ MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
 RUN perl INSTALL.pl \
         --AUTO fcp \
-        --ASSEMBLY GRCm38 \
+        --ASSEMBLY GRCh38 \
         --PLUGINSDIR /opt/vep/.vep/Plugins/ \
         --CACHEDIR /opt/vep/.vep/ \
         --PLUGINS all \
-        --SPECIES mus_musculus && \
-    vep -id rs27096498 \
-      --species mus_musculus \
+        --SPECIES homo_sapiens_merged && \
+    vep -id rs699 \
       --cache \
       --nearest symbol \
       -o 'STDOUT' \
+      --merged \
       --no_stats \
       > /dev/null

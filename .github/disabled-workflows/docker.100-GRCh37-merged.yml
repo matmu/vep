@@ -1,5 +1,7 @@
-name: 100-GRCh38
-on: [push]
+name: 100-GRCh37-merged
+on:  
+  schedule:
+  - cron:  '0 */6 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,13 +13,12 @@ jobs:
         dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
         sudo swapoff -a
         sudo rm -f /swapfile
-        sudo apt-get purge powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm zulu-11-azure-jdk zulu-12-azure-jdk azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5 
+        sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm zulu-11-azure-jdk zulu-12-azure-jdk azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5
         sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
-        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | grep "php\|python\|azure\|mysql\|mongodb" | awk '{ print $1 }')
         sudo apt clean
         sudo apt-get autoremove --purge
         docker image ls -a
-        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine\|ubuntu" | awk '{print $3}')
+        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine" | awk '{print $3}')
         docker image ls -a
         docker container ls -a
         df -h
@@ -27,5 +28,5 @@ jobs:
         name: matmu/vep
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASS }}
-        dockerfile: Dockerfiles/Docker.100-GRCh38
-        tags: "100-GRCh38"
+        dockerfile: Dockerfiles/Docker.100-GRCh37-merged
+        tags: "100-GRCh37-merged"

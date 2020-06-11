@@ -8,11 +8,12 @@ RUN perl INSTALL.pl \
         --PLUGINSDIR /opt/vep/.vep/Plugins/ \
         --CACHEDIR /opt/vep/.vep/ \
         --PLUGINS all \
-        --SPECIES mus_musculus && \
+        --SPECIES mus_musculus_merged && \
     vep -id rs27096498 \
       --species mus_musculus \
       --cache \
       --nearest symbol \
       -o 'STDOUT' \
+      --merged \
       --no_stats \
       > /dev/null
