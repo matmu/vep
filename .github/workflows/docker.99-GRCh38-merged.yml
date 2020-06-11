@@ -1,7 +1,5 @@
-name: 99-GRCh37-merged
-on:
-  schedule:
-  - cron:  '0 0 * * SUN'
+name: 99-GRCh38-merged
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,5 +26,5 @@ jobs:
         name: matmu/vep
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASS }}
-        dockerfile: Dockerfiles/Docker.99-GRCh37-merged
-        tags: "99-GRCh37-merged"
+        dockerfile: Dockerfiles/Docker.99-GRCh38-merged
+        tags: "99-GRCh38-merged"
