@@ -8,7 +8,8 @@ RUN perl INSTALL.pl \
         --PLUGINSDIR /opt/vep/.vep/Plugins/ \
         --CACHEDIR /opt/vep/.vep/ \
         --PLUGINS all \
-        --SPECIES homo_sapiens_merged && \
+        --SPECIES homo_sapiens_merged \
+	--NO_UPDATE && \
     vep -id rs699 \
       --cache \
       --nearest symbol \
