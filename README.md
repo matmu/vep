@@ -94,7 +94,7 @@ There is a plugin for `bcftools` that allows to split VEP annotations as well as
 
 
 ### Filtering by VEP annotations
-The image also includes a VEP filtering script which can be executed by
+If you chose to output the VEP annotations as text file, any command line tool (e.g. `awk`) or even `Excel` can be used for filtering the results. For VCF files, the image includes a VEP filtering script which can be executed by
 ```bash
 singularity exec vep.<version>.simg filter_vep [options]
 ```
