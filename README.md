@@ -23,13 +23,15 @@ This documentation describes the usage of the Docker image at https://hub.docker
 
 
 ## Available versions
-**Human:** ![100-GRCh38](https://github.com/matmu/vep/workflows/100-GRCh38/badge.svg)
+**Human:** ![101-GRCh38](https://github.com/matmu/vep/workflows/101-GRCh38/badge.svg)
+![100-GRCh38](https://github.com/matmu/vep/workflows/100-GRCh38/badge.svg)
 ![100-GRCh38-merged](https://github.com/matmu/vep/workflows/100-GRCh38-merged/badge.svg)
 ![100-GRCh37](https://github.com/matmu/vep/workflows/100-GRCh37/badge.svg)
 ![100-GRCh37-merged](https://github.com/matmu/vep/workflows/100-GRCh37-merged/badge.svg)
 ![99-GRCh38-merged](https://github.com/matmu/vep/workflows/99-GRCh38-merged/badge.svg)
 ![99-GRCh37-merged](https://github.com/matmu/vep/workflows/99-GRCh37-merged/badge.svg)\
-**Mouse:** ![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
+**Mouse:** ![101-GRCm38](https://github.com/matmu/vep/workflows/101-GRCm38/badge.svg)
+![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
 ![100-GRCm38-merged](https://github.com/matmu/vep/workflows/100-GRCm38-merged/badge.svg)
 
 The term `merged` refers to the merged Ensembl/RefSeq cache. To be consistent with the Ensembl website, chose Ensembl cache only (i.e. without the term `merged`). Examples for available versions are **99-GRCh38** (VEP 99 with Ensembl cache for reference GRCh38) or **99-GRh37-merged** (VEP 99 with Ensembl/Refseq cache for reference GRCh37).
