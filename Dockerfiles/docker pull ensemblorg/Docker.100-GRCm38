@@ -1,0 +1,18 @@
+FROM ensemblorg/ensembl-vep:release_101.0
+
+MAINTAINER Matthias Munz <matthias.munz@gmx.de>
+
+RUN perl INSTALL.pl \
+        --AUTO fcp \
+        --ASSEMBLY GRCm38 \
+        --PLUGINSDIR /opt/vep/.vep/Plugins/ \
+        --CACHEDIR /opt/vep/.vep/ \
+        --PLUGINS all \
+        --SPECIES mus_musculus && \
+    vep -id rs27096498 \
+      --species mus_musculus \
+      --cache \
+      --nearest symbol \
+      -o 'STDOUT' \
+      --no_stats \
+      > /dev/null
