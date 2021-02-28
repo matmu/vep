@@ -1,9 +1,10 @@
-FROM ensemblorg/ensembl-vep:release_103
+FROM ensemblorg/ensembl-vep:release_103.1
 
 MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
 RUN perl INSTALL.pl \
         --AUTO fcp \
+        --NO_UPDATE \
         --ASSEMBLY GRCh38 \
         --PLUGINSDIR /opt/vep/.vep/Plugins/ \
         --CACHEDIR /opt/vep/.vep/ \
