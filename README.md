@@ -31,7 +31,8 @@ This documentation describes the usage of the Docker image at https://hub.docker
 ![100-GRCh37-merged](https://github.com/matmu/vep/workflows/100-GRCh37-merged/badge.svg)
 ![99-GRCh38-merged](https://github.com/matmu/vep/workflows/99-GRCh38-merged/badge.svg)
 ![99-GRCh37-merged](https://github.com/matmu/vep/workflows/99-GRCh37-merged/badge.svg)\
-**Mouse:** ![101-GRCm38](https://github.com/matmu/vep/workflows/101-GRCm38/badge.svg)
+**Mouse:** [![103-GRCm38](https://github.com/matmu/vep/actions/workflows/docker.103-GRCm38.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.103-GRCm38.yml)
+![101-GRCm38](https://github.com/matmu/vep/workflows/101-GRCm38/badge.svg)
 ![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
 ![100-GRCm38-merged](https://github.com/matmu/vep/workflows/100-GRCm38-merged/badge.svg)
 
