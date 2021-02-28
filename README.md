@@ -23,7 +23,8 @@ This documentation describes the usage of the Docker image at https://hub.docker
 
 
 ## Available versions
-**Human:** ![101-GRCh38](https://github.com/matmu/vep/workflows/101-GRCh38/badge.svg)
+**Human:** [![102-GRCh38](https://github.com/matmu/vep/actions/workflows/docker.102-GRCh38.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.102-GRCh38.yml)
+![101-GRCh38](https://github.com/matmu/vep/workflows/101-GRCh38/badge.svg)
 ![100-GRCh38](https://github.com/matmu/vep/workflows/100-GRCh38/badge.svg)
 ![100-GRCh38-merged](https://github.com/matmu/vep/workflows/100-GRCh38-merged/badge.svg)
 ![100-GRCh37](https://github.com/matmu/vep/workflows/100-GRCh37/badge.svg)
