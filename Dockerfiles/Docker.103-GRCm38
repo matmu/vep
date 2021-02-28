@@ -5,7 +5,7 @@ MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 RUN perl INSTALL.pl \
         --AUTO fcp \
         --NO_UPDATE \
-        --ASSEMBLY GRCm38 \
+        --ASSEMBLY GRCm39 \
         --PLUGINSDIR /opt/vep/.vep/Plugins/ \
         --CACHEDIR /opt/vep/.vep/ \
         --PLUGINS all \
