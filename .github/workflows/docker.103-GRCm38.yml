@@ -1,8 +1,9 @@
 name: 103-GRCm38
-on: 
-  paths:
-    - "Dockerfiles/Docker.103-GRCm38"
-    - ".github/workflows/docker.103-GRCm38.yml"
+on:
+  push:
+    paths:
+      - "Dockerfiles/Docker.103-GRCm38"
+      - ".github/workflows/docker.103-GRCm38.yml"
 jobs:
   build:
     runs-on: ubuntu-latest
