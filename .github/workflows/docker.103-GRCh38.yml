@@ -1,5 +1,9 @@
-name: 102-GRCh38
-on: [push]
+name: 103-GRCh38
+on: 
+  push:
+    paths:
+    - "Dockerfiles/Docker.103-GRCh38"
+    - ".github/workflows/docker.103-GRCh38.yml"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,5 +31,5 @@ jobs:
         name: matmu/vep
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASS }}
-        dockerfile: Dockerfiles/Docker.102-GRCh38
-        tags: "102-GRCh38"
+        dockerfile: Dockerfiles/Docker.103-GRCh38
+        tags: "103-GRCh38"
