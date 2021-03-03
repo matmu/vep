@@ -1,4 +1,4 @@
-name: 103-GRCh38
+name: 103-GRCh38-merged
 on: 
   push:
     paths:
