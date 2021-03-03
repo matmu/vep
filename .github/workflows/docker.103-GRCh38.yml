@@ -12,14 +12,11 @@ jobs:
     - name: Free disk space
       run: |
         df -h
-        sudo swapoff -a
-        sudo rm -f /swapfile
-        df -h
         sudo rm -rf "/usr/local/share/boost"
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         df -h
         dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
-        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | grep "extra\|ghc\|powershell\|hhvm\|firefox\|google\|adoptopenjdk\|dotnet\|php\|python\|azure\|mysql\|mongodb\|postgres" | grep -v important | awk '{ print $1 }')
+        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | grep "snapd\|r-base\|extra\|ghc\|powershell\|hhvm\|firefox\|google\|adoptopenjdk\|dotnet\|php\|python\|azure\|mysql\|mongodb\|postgres" | grep -v important | awk '{ print $1 }')
         # sudo apt-get purge powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5 
         # sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
         sudo apt clean
