@@ -1,0 +1,38 @@
+name: 103-GRCh38
+on: 
+  push:
+    paths:
+    - "Dockerfiles/Docker.103-GRCh38-merged"
+    - ".github/workflows/docker.103-GRCh38-merged.yml"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Free disk space
+      run: |
+        df -h
+        sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        df -h
+        dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
+        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | grep "snapd\|r-base\|extra\|ghc\|powershell\|hhvm\|firefox\|google\|adoptopenjdk\|dotnet\|php\|python\|azure\|mysql\|mongodb\|postgres" | grep -v important | awk '{ print $1 }')
+        # sudo apt-get purge powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5 
+        # sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
+        sudo apt clean
+        sudo apt-get autoremove --purge
+        df -h
+        docker image ls -a
+        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine\|ubuntu" | awk '{print $3}')
+        docker image ls -a
+        docker container ls -a
+        dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
+        df -h
+    - name: Build and publish on Dockerhub
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: matmu/vep
+        username: ${{ secrets.DOCKER_USER }}
+        password: ${{ secrets.DOCKER_PASS }}
+        dockerfile: Dockerfiles/Docker.103-GRCh38-merged
+        tags: "103-GRCh38-merged"
