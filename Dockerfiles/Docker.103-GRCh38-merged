@@ -15,4 +15,5 @@ RUN perl INSTALL.pl \
       --nearest symbol \
       -o 'STDOUT' \
       --no_stats \
+      --merged \
       > /dev/null
