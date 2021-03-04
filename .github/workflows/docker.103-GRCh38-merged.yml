@@ -16,7 +16,7 @@ jobs:
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         df -h
         dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
-        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | grep "optional\|snapd\|r-base\|extra\|ruby\|sqlite\|ghc\|powershell\|hhvm\|firefox\|google\|adoptopenjdk\|dotnet\|php\|python\|azure\|mysql\|mongodb\|postgres" | grep -v "important\|moby\|required" | awk '{ print $1 }')
+        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | grep "snapd\|r-base\|extra\|ruby\|sqlite\|ghc\|powershell\|hhvm\|firefox\|google\|adoptopenjdk\|dotnet\|php\|python\|azure\|mysql\|mongodb\|postgres" | grep -v "important\|moby\|required" | awk '{ print $1 }')
         sudo apt clean
         sudo apt-get autoremove --purge
         df -h
