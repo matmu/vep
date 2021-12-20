@@ -20,6 +20,7 @@ jobs:
         sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
         echo "here"
         sudo apt clean
+        echo "where"
         sudo apt-get autoremove --purge
         docker image ls -a
         docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine" | awk '{print $3}')
