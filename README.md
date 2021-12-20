@@ -25,22 +25,22 @@ This documentation describes the usage of the Docker image at https://hub.docker
 ## Available versions
 **Human**
 
-[![105-GRCh38](https://github.com/matmu/vep/actions/workflows/docker.105-GRCh38.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.105-GRCh38.yml)
+[![105-GRCh38](https://github.com/matmu/vep/actions/workflows/docker.105-GRCh38.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.105-GRCh38.yml) \
 [![103-GRCh38-merged](https://github.com/matmu/vep/actions/workflows/docker.103-GRCh38-merged.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.103-GRCh38-merged.yml)
-[![103-GRCh38](https://github.com/matmu/vep/actions/workflows/docker.103-GRCh38.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.103-GRCh38.yml)
-![101-GRCh38](https://github.com/matmu/vep/workflows/101-GRCh38/badge.svg)
+[![103-GRCh38](https://github.com/matmu/vep/actions/workflows/docker.103-GRCh38.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.103-GRCh38.yml) \
+![101-GRCh38](https://github.com/matmu/vep/workflows/101-GRCh38/badge.svg) \
 ![100-GRCh38](https://github.com/matmu/vep/workflows/100-GRCh38/badge.svg)
 ![100-GRCh38-merged](https://github.com/matmu/vep/workflows/100-GRCh38-merged/badge.svg)
 ![100-GRCh37](https://github.com/matmu/vep/workflows/100-GRCh37/badge.svg)
-![100-GRCh37-merged](https://github.com/matmu/vep/workflows/100-GRCh37-merged/badge.svg)
+![100-GRCh37-merged](https://github.com/matmu/vep/workflows/100-GRCh37-merged/badge.svg) \
 ![99-GRCh38-merged](https://github.com/matmu/vep/workflows/99-GRCh38-merged/badge.svg)
 ![99-GRCh37-merged](https://github.com/matmu/vep/workflows/99-GRCh37-merged/badge.svg)
 
 **Mouse**
 
-[![test105-GRCm39](https://github.com/matmu/vep/actions/workflows/docker.105-GRCm39.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.105-GRCm39.yml)
-[![103-GRCm39](https://github.com/matmu/vep/actions/workflows/docker.103-GRCm39.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.103-GRCm39.yml)
-![101-GRCm38](https://github.com/matmu/vep/workflows/101-GRCm38/badge.svg)
+[![105-GRCm39](https://github.com/matmu/vep/actions/workflows/docker.105-GRCm39.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.105-GRCm39.yml) \
+[![103-GRCm39](https://github.com/matmu/vep/actions/workflows/docker.103-GRCm39.yml/badge.svg)](https://github.com/matmu/vep/actions/workflows/docker.103-GRCm39.yml) \
+![101-GRCm38](https://github.com/matmu/vep/workflows/101-GRCm38/badge.svg) \
 ![100-GRCm38](https://github.com/matmu/vep/workflows/100-GRCm38/badge.svg)
 ![100-GRCm38-merged](https://github.com/matmu/vep/workflows/100-GRCm38-merged/badge.svg)
 
