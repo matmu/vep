@@ -1,0 +1,23 @@
+FROM ensemblorg/ensembl-vep:release_105.0
+
+MAINTAINER Matthias Munz <matthias.munz@gmx.de>
+
+
+RUN apt-get update -y && \
+    apt-get -y install samtools
+    
+RUN perl INSTALL.pl \
+        --AUTO fcp \
+        --NO_UPDATE \
+        --ASSEMBLY GRCm39 \
+        --PLUGINSDIR /opt/vep/.vep/Plugins/ \
+        --CACHEDIR /opt/vep/.vep/ \
+        --PLUGINS all \
+        --SPECIES mus_musculus && \
+    vep -id rs27096498 \
+      --species mus_musculus \
+      --cache \
+      --nearest symbol \
+      -o 'STDOUT' \
+      --no_stats \
+      > /dev/null
