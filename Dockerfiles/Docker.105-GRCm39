@@ -4,7 +4,8 @@ MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
 
 RUN sudo apt-get update && \
-    sudo apt-get -y install samtools
+    sudo apt-get install -y samtools && \
+    sudp apt-get clean
     
 RUN perl INSTALL.pl \
         --AUTO fcp \
