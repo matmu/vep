@@ -15,9 +15,10 @@ jobs:
         dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
         sudo swapoff -a
         sudo rm -f /swapfile
+        sudo apt-get update
         sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm azure-cli
         echo "here1"
-        sudo apt-get purge --no-install-recommends --no-install-suggests $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
+        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
         echo "here"
         sudo apt clean
         echo "where"
