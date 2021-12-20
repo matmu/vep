@@ -1,0 +1,34 @@
+name: 105-GRCm39
+on:
+  push:
+    paths:
+      - "Dockerfiles/Docker.105-GRCm39"
+      - ".github/workflows/docker.105-GRCm39.yml"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Free disk space
+      run: |
+        df -h
+        dpkg-query -W --showformat='${Installed-Size}\t${Package}\t${Priority}\n' | sort -k1,1n
+        sudo swapoff -a
+        sudo rm -f /swapfile
+        sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm azure-cli ghc-8.0.2 ghc-8.2.2 ghc-8.4.4 ghc-8.6.2 ghc-8.6.3 ghc-8.6.4 ghc-8.6.5
+        sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
+        sudo apt clean
+        sudo apt-get autoremove --purge
+        docker image ls -a
+        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine" | awk '{print $3}')
+        docker image ls -a
+        docker container ls -a
+        df -h
+    - name: Build and publish on Dockerhub
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: matmu/vep
+        username: ${{ secrets.DOCKER_USER }}
+        password: ${{ secrets.DOCKER_PASS }}
+        dockerfile: Dockerfiles/Docker.105-GRCm39
+        tags: "105-GRCm39"
