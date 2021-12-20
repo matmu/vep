@@ -22,6 +22,7 @@ jobs:
         sudo apt-get autoremove --purge
         docker image ls -a
         docker system prune -a -f --filter "label!=repository=https://github.com/elgohr/Publish-Docker-Github-Action"
+        docker system prune -f
         docker image ls -a
         docker container ls -a
         df -h
