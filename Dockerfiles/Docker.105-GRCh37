@@ -1,6 +1,14 @@
-FROM ensemblorg/ensembl-vep:release_100.2
+FROM ensemblorg/ensembl-vep:release_105.0
 
 MAINTAINER Matthias Munz <matthias.munz@gmx.de>
+
+# Change user to root
+USER root
+
+RUN apt-get update && apt-get install -y samtools
+
+# Change user to vep
+USER vep
 
 RUN perl INSTALL.pl \
         --AUTO fcp \
