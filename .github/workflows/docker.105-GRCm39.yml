@@ -17,14 +17,12 @@ jobs:
         sudo rm -f /swapfile
         sudo apt-get update
         sudo apt-get remove powershell google-chrome-stable google-cloud-sdk firefox dotnet-sdk-3.1 hhvm azure-cli
-        echo "here1"
         sudo apt-get purge $(dpkg-query -Wf '${Package;-40}${Priority}\n' | awk '$2 ~ /extra/ { print $1 }')
-        echo "here"
         sudo apt clean
-        echo "where"
         sudo apt-get autoremove --purge
         docker image ls -a
-        docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine" | awk '{print $3}')
+        #docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine" | awk '{print $3}')
+        docker system prune -a
         docker image ls -a
         docker container ls -a
         df -h
