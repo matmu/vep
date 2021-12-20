@@ -21,8 +21,7 @@ jobs:
         sudo apt clean
         sudo apt-get autoremove --purge
         docker image ls -a
-        #docker rmi $(docker images | grep " \(hours\|weeks\|years\) ago\|<none>\|jekyll\|azure\|alpine" | awk '{print $3}')
-        docker system prune -a -f
+        docker system prune -a -f --filter "name!=6a6825"
         docker image ls -a
         docker container ls -a
         df -h
