@@ -1,0 +1,19 @@
+FROM ensemblorg/ensembl-vep:release_100.2
+
+MAINTAINER Matthias Munz <matthias.munz@gmx.de>
+
+RUN perl INSTALL.pl \
+        --AUTO fcp \
+        --ASSEMBLY GRCh37 \
+        --PLUGINSDIR /opt/vep/.vep/Plugins/ \
+        --CACHEDIR /opt/vep/.vep/ \
+        --PLUGINS all \
+        --SPECIES homo_sapiens && \
+    vep -id rs699 \
+      --assembly GRCh37 \
+      --port 3337 \
+      --cache \
+      --nearest symbol \
+      -o 'STDOUT' \
+      --no_stats \
+      > /dev/null
