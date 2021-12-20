@@ -3,8 +3,8 @@ FROM ensemblorg/ensembl-vep:release_105.0
 MAINTAINER Matthias Munz <matthias.munz@gmx.de>
 
 
-RUN apt-get update -y && \
-    apt-get -y install samtools
+RUN sudo apt-get update && \
+    sudo apt-get -y install samtools
     
 RUN perl INSTALL.pl \
         --AUTO fcp \
